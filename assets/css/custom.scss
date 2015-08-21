@@ -1,0 +1,134 @@
+/* COLOUR REFERENCES */
+
+$green:		#79b044;
+$salmon:	#dd5638;
+$blueGray:	#3e4249;
+
+
+/* MIXINS */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* IMPORT CSS TEMPLATES */
+
+@import 'hero';
+@import 'layout';
+@import 'custom-sprites';
+
+
+/* GENERAL */
+
+body {
+	margin-top: 50px;
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-size: 16px;
+	background: url('../img/tile.jpg') top left repeat;
+}
+
+/* GLOBAL */
+
+h1,h2,h3,h4,h5,h6 {
+	//font-weight: bold;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h1,h2 {
+	margin: 0 0 40px;
+}
+
+h3 {
+	margin: 20px 0;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+img {
+	max-width: 100%;
+}
+
+blockquote {
+	padding: 0;
+	border: none;
+	font-style: italic;
+	text-align: left;
+
+	cite {
+	display: block;
+	color: #777;
+	margin: 15px 0 0 0;
+	}
+	&:before {
+	display: none;
+	}
+}
+
+a {
+	&:link, &:visited {
+	color: white;
+	}
+	&:hover{
+	text-decoration: none;
+	color: #c9302c;		
+	}
+}
+
+.btn {
+	//font-weight: bold;
+}
+.btn:focus {
+	outline: none;
+}
+
+.btn-success {
+	background: $green;
+	border: none;
+
+	&:hover {
+	background: #6a9b3d;
+	border-color: #6a9b3d;
+	}
+}
+
+.btn-danger {
+	background-color: $salmon;
+	border-color: #d95131;
+}
+
+.modal-content{
+	background: url('../img/tile.jpg') top left repeat;
+}
+
+.badge.social {
+	background: #ccc;
+	font-size: 24px;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 42px;
+	margin: 0 5px 20px 0;
+	padding: 0;
+	color: white;
+	@include border-radius(50px);
+}
+
+.badge.social.twitter:hover {
+	background: #55acee;
+}
+
+.badge.social.facebook:hover {
+	background: #3b5998;
+}
+
+.badge.social.gplus:hover {
+	background: #db4b39;
+}

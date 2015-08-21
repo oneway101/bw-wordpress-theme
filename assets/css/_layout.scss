@@ -1,0 +1,135 @@
+#optin {
+	background: $blueGray;
+	padding: 20px 0;
+	color: white;
+	font-size: 1.2em;
+	//-webkit-font-smoothing: antialiased;
+	//text-rendering: optimizelegibility;
+
+	p{
+		margin: 7px 0 0 0;
+	}
+}
+
+section {
+	padding: 80px 0;
+
+	.section-header {
+		text-align: center;
+	}
+
+	h2 {
+		margin: 20px 0 40px;
+	}
+
+	h3 {
+		margin: 30px 0 10px;
+	}
+
+	.main-content {
+		padding: 40px 0;
+	}
+}
+
+#who-benefits {
+	background: white;
+}
+
+#course-features {
+	background: $blueGray;
+	color: white;
+	text-align: center;
+}
+
+#project-features {
+	text-align: center;
+}
+
+#featurette {
+	background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;
+	background-size: cover; //cover the background with full image.
+	text-align: center;
+	color: white;
+}
+
+#instructor {
+	background: white url('../img/brad-elvis.png') 90% -10px no-repeat;
+
+	h2 {
+	margin: 0 0 20px;
+	}
+
+	.num {
+		display: table;//required for child .num-content to display:table-cell.
+		font-size: 30px;
+		font-weight: bold;
+		color: white;
+		line-height: 24px;
+		height: 140px;
+		width: 140px;
+		text-align: center;
+		background: #dd5638;
+		@include border-radius(100%);
+		//-webkit-font-smoothing: antialiased;
+		//text-rendering: optimizelegibility;
+	
+		.num-content {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	
+		span {
+		display: block;
+		font-size: 20px;
+		font-weight: normal;
+		}
+	}	
+}
+
+#kudos {
+	text-align: center;
+}
+
+.testimonial {
+	margin-bottom: 60px;
+
+	img {
+	@include border-radius(50%);
+	}
+}
+
+#signup {
+	text-align: center;
+	background: url('../img/hipster-stuff.jpg') center center repeat fixed;
+	background-size: cover;
+	color: white;
+	padding: 140px 0;
+	h2 strong {
+		border-bottom: solid 2px #dd5638;
+	}
+
+	.btn {
+	font-size: 24px;
+	}
+}
+
+footer {
+	background: $blueGray;
+	color: white;
+	padding: 20px 0 10px;
+	font-size: 12px;
+}
+
+footer p {
+	margin: 0;
+	a{
+		&:link, &:visited {
+		color: white;
+		}
+
+		&:hover {
+		color: $salmon;
+		}
+	}
+}
+
