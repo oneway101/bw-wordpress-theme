@@ -2,6 +2,15 @@
 
 /*Template Name: Home Page*/
 
+//Custom Fields
+$section1 =					get_post_meta(5,'section1',true);
+$section2 =					get_post_meta(5,'section2',true);
+$section3 =					get_post_meta(5,'section3',true);
+$custom_url =				get_post_meta(5,'custom_url',true);
+$button_text =				get_post_meta(5,'button_text',true);
+$optin_text =				get_post_meta(5,'optin_text',true);
+$optin_button_text =		get_post_meta(5,'optin_button_text',true);
+
 get_header(); ?>
 <!-- HERO -->
 <section id="hero">
@@ -12,25 +21,25 @@ get_header(); ?>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo-badge.png" alt="Bootstrap to WordPress" class="logo">
 				</div>
 				<div class="col-sm-7 hero-text">
-					<h1>Bootstrap to WordPress</h1>
-		            <p class="lead">Earn An Extra $1k - $5k a Month by Learning to Code Your Very Own Responsive &amp; Custom WordPress Websites with Bootstrap</p>
+					<h1><?php bloginfo('name'); ?></h1>
+		            <p class="lead"><?php bloginfo('description'); ?></p>
 		            
 		            <div id="price-timeline">
 		            	<div class="price active">
 		            		<h4>Pre-Launch Price <small>Ends soon!</small></h4>
-		            		<span>$149</span>
+		            		<span><?php echo $section1 ?></span>
 		            	</div><!-- end price -->
 		            	<div class="price">
 		            		<h4>Launch Price <small>Coming soon!</small></h4>
-		            		<span>$299</span>
+		            		<span><?php echo $section2 ?></span>
 		            	</div><!-- end price -->
 		            	<div class="price">
 		            		<h4>Final Price <small>Coming soon!</small></h4>
-		            		<span>$399</span>
+		            		<span><?php echo $section3 ?></span>
 		            	</div><!-- end price -->
 		            </div><!-- price-timeline -->
 
-		            <p><a class="btn btn-lg btn-danger" href="/" role="button">Enroll now &raquo;</a></p>
+		            <p><a class="btn btn-lg btn-danger" href="<?php echo $custom_url ?>" role="button"><?php echo $button_text ?></a></p>
 	    		</div><!-- col -->
 			</div>
 		</div>
@@ -42,11 +51,10 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<p class="lead"><strong>Subscribe to our mailing list.</strong>
-				We'll send something special as a thank you.</p>
+				<p class="lead"><?php echo $optin_text ?></P>
 			</div>
 			<div class="col-md-4">
-				<button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">Click here to subscribe.
+				<button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal"><?php echo $optin_button_text ?>
 				</button>
 			</div>
 		</div>
