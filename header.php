@@ -45,7 +45,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="/"><img src="assets/img/logo.png" alt="Bootstrap to WordPress"></a>
+						<a class="navbar-brand" href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to WordPress"></a>
 					</div>
 					<?php
 						wp_nav_menu(array(
